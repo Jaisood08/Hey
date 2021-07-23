@@ -29,13 +29,29 @@
             height: 60%;
             transform: translate3d(0px, 0px, 0px);
             }
+         .CardR
+         {
+            flex:1;
+            margin-left: 30px;
+            margin-top: 40px;
+            font-size: 20px;
+         }
          @media (max-width: 600px) {
          .jayim {
             display: none;
             width: 60%;
             height: 60%;
             transform: translate3d(0px, 0px, 0px);
+            margin-right: 0;
             }
+         .CardR
+         {
+            flex:1;
+            margin-top: 40px;
+            margin-left: 0px;
+            font-size: 18px;
+         }
+
          }
          .jaytext h1{
             font-size: 80%;
@@ -237,10 +253,7 @@
                                  
                                  </div>
 
-                                 <div style="flex:1;
-                                 margin-left: 30px;
-                                 margin-top: 40px;
-                                 font-size: 20px;">
+                                 <div class="CardR">
                                     
                                     <div style="color: aliceblue;
                                     text-align: left;">
@@ -263,7 +276,7 @@
                                            I want to make solutions that can ease the lives of the users. <br>
                                           </h>
                                        
-                                       <div style="display: flex; text-align: center; color: cornsilk;">
+                                       <div style="justify-content: space-between; display: flex; text-align: center; color: cornsilk;">
                                           <div style="flex:1;justify-content: center;">
                                              <img src="https://img.icons8.com/bubbles/50/000000/project-setup.png" style="align-self: center; max-width: 120;max-height: 120px; width: auto;
                                           height: auto;"/>
