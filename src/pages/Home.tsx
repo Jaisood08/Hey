@@ -31,9 +31,9 @@ export default function Home() {
   // Preload every slide background so switching slides never shows a blank frame.
   useEffect(() => {
     for (const src of [
-      `${BASE}img/Back.jpg`,
-      `${BASE}img/slider-projects.jpg`,
-      `${BASE}img/slider-music.jpg`,
+      `${BASE}img/bg-home-navy.jpg`,
+      `${BASE}img/bg-projects-navy.jpg`,
+      `${BASE}img/bg-geo-music.svg`,
     ]) {
       const img = new Image()
       img.src = src
@@ -49,7 +49,7 @@ export default function Home() {
             <Navigation tagline="Welcome to my Portfolio" />
             <div className="slider w-slider">
               <div className="slider-tracker">
-                <div className="tracker-item">
+                <div className="tracker-item" onClick={() => setSlide(0)}>
                   {slide === 0 && <div className="tracker-line" />}
                   <div>
                     <a style={{ textDecoration: 'none', color: 'aliceblue' }} href="#/about">
@@ -57,7 +57,7 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
-                <div className="tracker-item">
+                <div className="tracker-item" onClick={() => setSlide(1)}>
                   {slide === 1 && <div className="tracker-line" />}
                   <div>
                     <a style={{ textDecoration: 'none', color: 'aliceblue' }} href="#/projects">
@@ -65,7 +65,7 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
-                <div className="tracker-item">
+                <div className="tracker-item" onClick={() => setSlide(2)}>
                   {slide === 2 && <div className="tracker-line" />}
                   <div>
                     <a
@@ -87,24 +87,24 @@ export default function Home() {
                       <div className="w-dyn-item">
                         <div className="project-content">
                           <div style={{ maxWidth: '100%' }} className="project-title">
-                            <div style={{ display: 'flex', marginTop: 40 }}>
+                            <div className="hero-flex" style={{ display: 'flex', marginTop: 40 }}>
                               <div className="jayim">
                                 <img
                                   style={{ maxWidth: 450, height: 'auto', width: 'auto' }}
                                   id="jay"
-                                  src={`${BASE}img/jay.png`}
+                                  src={`${BASE}img/jay-hero.png`}
                                   alt="Jay Sood"
                                 />
                               </div>
                               <div className="CardR">
                                 <div style={{ color: 'aliceblue', textAlign: 'left' }}>
-                                  <h1 style={{ color: 'orange', fontSize: '280%' }}>Hello !</h1>
+                                  <h1 style={{ color: '#E8A33D', fontSize: '280%' }}>Hello !</h1>
                                 </div>
                                 <div className="jaytext" style={{ color: 'aliceblue', textAlign: 'left' }}>
                                   <h1 style={{ fontSize: '160%' }}>
                                     I'm <strong style={{ color: 'aliceblue' }}>Jay Sood </strong>
                                   </h1>
-                                  <h1 style={{ color: '#0450E7', fontSize: '200%', fontWeight: 'bold' }}>
+                                  <h1 style={{ color: '#7FA6E8', fontSize: '200%', fontWeight: 'bold' }}>
                                     <TxtRotate phrases={rotatePhrases} />
                                   </h1>
                                   <h1 style={{ overflowWrap: 'break-word', maxWidth: '94%', lineHeight: 1.6 }}>
@@ -117,7 +117,7 @@ export default function Home() {
                                   <div className="stats-row" style={{ color: 'cornsilk' }}>
                                     <div className="stat">
                                       <img
-                                        src="https://img.icons8.com/bubbles/50/000000/project-setup.png"
+                                        src={`${BASE}icons/stat-projects.svg`}
                                         style={{ maxWidth: 40, maxHeight: 40, width: 'auto', height: 'auto' }}
                                         alt=""
                                       />
@@ -126,7 +126,7 @@ export default function Home() {
                                     </div>
                                     <div className="stat">
                                       <img
-                                        src="https://img.icons8.com/color/48/000000/man-winner-skin-type-3.png"
+                                        src={`${BASE}icons/stat-competitions.svg`}
                                         style={{ maxWidth: 40, maxHeight: 40, width: 'auto', height: 'auto' }}
                                         alt=""
                                       />
@@ -135,7 +135,7 @@ export default function Home() {
                                     </div>
                                     <div className="stat">
                                       <img
-                                        src="https://img.icons8.com/bubbles/50/000000/student-male.png"
+                                        src={`${BASE}icons/stat-skills.svg`}
                                         style={{ maxWidth: 40, maxHeight: 40, width: 'auto', height: 'auto' }}
                                         alt=""
                                       />
@@ -168,7 +168,7 @@ export default function Home() {
                             </div>
                           </div>
                           <div
-                            style={{ backgroundImage: `url("${BASE}img/Back.jpg")`, backgroundColor: '#11172B' }}
+                            style={{ backgroundImage: `url("${BASE}img/bg-home-navy.jpg")`, backgroundColor: '#0B1526' }}
                             className="project-scale"
                           ></div>
                           <div className="overlay"></div>
@@ -194,7 +194,7 @@ export default function Home() {
                             </div>
                           </div>
                           <div
-                            style={{ backgroundImage: `url("${BASE}img/slider-projects.jpg")` }}
+                            style={{ backgroundImage: `url("${BASE}img/bg-projects-navy.jpg")` }}
                             className="project-scale"
                           ></div>
                           <div className="overlay"></div>
@@ -256,7 +256,7 @@ export default function Home() {
                             </div>
                           </div>
                           <div
-                            style={{ backgroundImage: `url("${BASE}img/slider-music.jpg")` }}
+                            style={{ backgroundImage: `url("${BASE}img/bg-geo-music.svg")` }}
                             className="project-scale"
                           ></div>
                           <div className="overlay"></div>

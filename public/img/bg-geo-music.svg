@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0e1a31"></stop>
+      <stop offset="1" stop-color="#0b1526"></stop>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#g)"></rect>
+  <g fill="none" stroke="#7fa6e8" stroke-opacity="0.1" stroke-width="2">
+    <path d="M300 1080 A660 660 0 0 1 1620 1080"></path>
+    <path d="M420 1080 A540 540 0 0 1 1500 1080"></path>
+    <path d="M540 1080 A420 420 0 0 1 1380 1080"></path>
+    <path d="M660 1080 A300 300 0 0 1 1260 1080"></path>
+  </g>
+  <g stroke="#e8a33d" stroke-opacity="0.16" stroke-linecap="round">
+    <line x1="240" y1="300" x2="240" y2="420" stroke-width="4"></line>
+    <line x1="300" y1="260" x2="300" y2="460" stroke-width="4"></line>
+    <line x1="360" y1="330" x2="360" y2="390" stroke-width="4"></line>
+    <line x1="1560" y1="220" x2="1560" y2="380" stroke-width="4"></line>
+    <line x1="1620" y1="260" x2="1620" y2="340" stroke-width="4"></line>
+    <line x1="1680" y1="180" x2="1680" y2="420" stroke-width="4"></line>
+  </g>
+  <g fill="none" stroke="#7fa6e8" stroke-opacity="0.09" stroke-width="2">
+    <circle cx="1700" cy="760" r="120"></circle>
+    <circle cx="200" cy="700" r="90"></circle>
+  </g>
+</svg>
