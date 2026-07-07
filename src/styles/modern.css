@@ -1,0 +1,312 @@
+/* ==========================================================================
+   Modern theme — navy + warm amber
+   Loaded after webflow.css / site.css / about.css; overrides colors, type,
+   buttons, loader. Layout untouched.
+   ========================================================================== */
+
+:root {
+  --navy-900: #0b1526;
+  --navy-800: #101d36;
+  --navy-700: #16294d;
+  --navy-600: #25355a;
+  --amber: #e8a33d;
+  --amber-soft: #f0b95e;
+  --blue-soft: #7fa6e8;
+  --ink: #e9eef6;
+  --ink-muted: #9fb0c8;
+  --paper: #f7f5f0;
+  --paper-card: #ffffff;
+}
+
+/* ----- Typography ----- */
+body {
+  font-family: 'Manrope', Inter, sans-serif;
+}
+
+h1, h2, h3, h4, h5, .sub-text, .title-3, .project-heading, .timeline-event-copy h3 {
+  font-family: 'Sora', 'Manrope', sans-serif;
+}
+
+.caveat {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-muted) !important;
+  font-weight: 600;
+}
+
+/* ----- Loader ----- */
+#Jload {
+  background: var(--navy-900);
+}
+
+#Jload .loader-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 56px;
+  height: 56px;
+  margin: -28px 0 0 -28px;
+  border-radius: 50%;
+  border: 3px solid rgba(233, 238, 246, 0.12);
+  border-top-color: var(--amber);
+  animation: jload-spin 0.9s linear infinite;
+}
+
+#Jload .loader-name {
+  position: absolute;
+  top: calc(50% + 48px);
+  width: 100%;
+  text-align: center;
+  color: var(--ink-muted);
+  font-family: 'Sora', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+@keyframes jload-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ----- Hero / slider surfaces ----- */
+.hero {
+  background-color: var(--navy-900);
+}
+
+.overlay {
+  background-image: linear-gradient(160deg, rgba(11, 21, 38, 0.3), rgba(11, 21, 38, 0.62));
+}
+
+.tracker-item {
+  color: var(--ink-muted);
+}
+
+.tracker-line {
+  background-color: var(--amber);
+}
+
+/* ----- Buttons: outlined amber on dark ----- */
+.button {
+  background-color: transparent;
+  border: 1.5px solid var(--amber);
+  color: var(--ink);
+  font-family: 'Sora', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.button:hover {
+  background-color: var(--amber);
+  color: var(--navy-900);
+}
+
+/* ----- Slider arrows ----- */
+.slider-arrow {
+  background-color: rgba(233, 238, 246, 0.92);
+}
+
+.slider-arrow:hover {
+  background-color: var(--amber);
+}
+
+/* ----- Typewriter cursor ----- */
+.txt-rotate > .wrap {
+  border-right-color: var(--amber);
+}
+
+/* ----- Stats row ----- */
+.stats-row .stat img {
+  opacity: 0.95;
+}
+
+.stats-row .stat h1 {
+  font-family: 'Sora', sans-serif;
+  color: var(--amber-soft);
+}
+
+.stats-row .stat p {
+  color: var(--ink-muted) !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 12px !important;
+}
+
+/* ----- Navigation / menu ----- */
+.menu-content {
+  background-color: var(--navy-800);
+}
+
+.navigation-link {
+  font-family: 'Sora', sans-serif;
+  letter-spacing: 0.06em;
+}
+
+.menu-wrapper .navigation-link {
+  color: var(--ink);
+}
+
+.menu-wrapper .navigation-link.w--current {
+  color: var(--amber);
+}
+
+.menu-wrapper .copyright {
+  color: var(--ink-muted);
+}
+
+.line-overlay {
+  background-color: var(--amber);
+}
+
+.social-icon {
+  opacity: 0.85;
+  transition: opacity 150ms ease, transform 150ms ease;
+}
+
+.social-icon:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* ----- About page: resume section on warm paper ----- */
+.resume-styles {
+  background-color: var(--paper);
+}
+
+.resume-styles .section h4 {
+  color: var(--amber);
+  letter-spacing: 0.2em;
+}
+
+.resume-styles .section h1 {
+  color: var(--navy-600);
+}
+
+.resume-styles .timeline-event-icon {
+  background-color: var(--amber) !important;
+}
+
+.resume-styles .timeline-event-thumbnail {
+  background-color: var(--navy-600) !important;
+  color: var(--paper) !important;
+  border-radius: 3px;
+  font-family: 'Sora', sans-serif;
+  letter-spacing: 0.06em;
+}
+
+.resume-styles .timeline:before {
+  background-color: rgba(37, 53, 90, 0.18) !important;
+}
+
+.resume-styles .verify-link {
+  color: var(--navy-600);
+  border-bottom: 1px solid var(--amber);
+}
+
+.resume-styles .verify-link:hover {
+  color: var(--amber);
+  text-decoration: none;
+}
+
+.resume-styles .portfolio .categories-grid .categories ul li a.active {
+  background-color: var(--navy-600);
+  color: var(--paper);
+}
+
+.resume-styles .portfolio .categories-grid .categories ul li a:hover {
+  color: var(--amber);
+}
+
+/* ----- About hero photo: circular avatar ----- */
+.about-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(232, 163, 61, 0.85);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  margin-bottom: 24px;
+}
+
+/* ----- Home hero photo: mirror-fade cutout, no frame ----- */
+#jay {
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+/* ----- Keep the hero photo visible on narrower screens ----- */
+@media (max-width: 1020px) {
+  .jayim {
+    display: block !important;
+    width: 100%;
+    max-width: 240px;
+    margin: 0 auto;
+    flex: none;
+  }
+  .jayim img {
+    max-width: 100% !important;
+    width: 100%;
+    height: auto;
+  }
+  .hero-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-flex .CardR {
+    margin-top: 12px;
+  }
+}
+
+@media (max-height: 760px) and (max-width: 1020px) {
+  .jayim {
+    max-width: 150px;
+  }
+}
+
+/* ----- Projects page cards ----- */
+.JAYCARD {
+  background-color: var(--paper);
+  font-family: 'Manrope', sans-serif;
+}
+
+.JAYCARD .card {
+  background: var(--paper-card);
+  box-shadow: 0 12px 40px rgba(16, 29, 54, 0.14);
+  border: 1px solid rgba(37, 53, 90, 0.08);
+}
+
+.JAYCARD .card h2 {
+  font-family: 'Sora', sans-serif;
+  color: var(--navy-600);
+}
+
+.JAYCARD .card .desc {
+  color: #56637a;
+}
+
+.JAYCARD a {
+  color: var(--navy-600);
+}
+
+.JAYCARD a:hover {
+  color: var(--amber);
+}
+
+/* ----- Footer ----- */
+.footer,
+.bottom-part {
+  background-color: var(--paper);
+}
+
+.copyright {
+  color: #7a8499;
+  letter-spacing: 0.08em;
+}
+
+/* Home hero heading colors are inline; nothing else needed here. */

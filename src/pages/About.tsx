@@ -207,38 +207,58 @@ export default function About() {
       </div>
 
       <div
-        style={{ backgroundImage: `url("${BASE}img/hero-silk.jpg")` }}
+        style={{ backgroundImage: `url("${BASE}img/bg-geo-about.svg")` }}
         className="hero sub _5 b jaytry"
       >
         <div className="container">
-          <div className="sub-flex blog-page">
-            <img src={`${BASE}img/jay2.png`} style={{ maxWidth: '80%', maxHeight: 300 }} alt="Jay Sood" />
+          <div className="sub-flex blog-page" style={{ color: '#E9EEF6' }}>
+            <img
+              src={`${BASE}img/jay-about.png`}
+              style={{
+                maxWidth: '80%',
+                maxHeight: 320,
+                borderRadius: 16,
+                boxShadow: '0 20px 50px rgba(0, 0, 0, 0.4)',
+              }}
+              alt="Jay Sood"
+            />
             <div
               className="sub-text"
               style={{
-                fontWeight: 900,
-                fontSize: '360%',
+                fontWeight: 700,
+                fontSize: '330%',
                 textAlign: 'center',
-                color: '#f8f8ff',
-                WebkitTextStroke: '0.5px black',
-                textShadow: '2.4px 2.4px #000000',
+                color: '#f3f6fb',
+                marginTop: 12,
               }}
             >
               Jay Sood
             </div>
-            <br />
-            <p>
-              <strong>Date of birth : </strong> October 10, 2000
-            </p>
-            <p>
-              <strong>Address: : </strong> Rajasthan,India
-            </p>
-            <p>
-              <strong>Email : </strong> jaisood08@gmail.com
-            </p>
-            <p>
-              <strong>Phone : </strong> +91 9602132597
-            </p>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 7,
+                marginTop: 16,
+                marginBottom: 6,
+                fontSize: 17,
+                color: '#f3f6fb',
+                textShadow: '0 1px 4px rgba(0, 0, 0, 0.6)',
+              }}
+            >
+              <p style={{ margin: 0, color: '#f3f6fb' }}>
+                <strong style={{ color: '#e8a33d' }}>Date of birth :</strong> October 10, 2000
+              </p>
+              <p style={{ margin: 0, color: '#f3f6fb' }}>
+                <strong style={{ color: '#e8a33d' }}>Address :</strong> Rajasthan, India
+              </p>
+              <p style={{ margin: 0, color: '#f3f6fb' }}>
+                <strong style={{ color: '#e8a33d' }}>Email :</strong> jaisood08@gmail.com
+              </p>
+              <p style={{ margin: 0, color: '#f3f6fb' }}>
+                <strong style={{ color: '#e8a33d' }}>Phone :</strong> +91 9602132597
+              </p>
+            </div>
             <SocialIcons />
             <div className="margin-30px">
               <a

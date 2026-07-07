@@ -29,25 +29,23 @@ export default function Navigation({ tagline }: NavigationProps) {
         <Link to="/" className="brand-logo w-inline-block w--current">
           <img src={`${BASE}img/signature.png`} loading="lazy" width="110" alt="Jay Sood" className="katen-logo" />
           <div className="logo-divider _1"></div>
-          <div style={{ color: 'white', fontFamily: 'Geneva' }} className="caveat">
-            {tagline}
-          </div>
+          <div className="caveat">{tagline}</div>
         </Link>
         <div className="right-part">
           <div className="social-wrapper hide">
             <a href={socialLinks.linkedin} target="_blank" rel="noreferrer" className="social-icon w-inline-block">
-              <img src={socialIcons.linkedin} loading="lazy" width="23" alt="LinkedIn" />
+              <img src={socialIcons.light.linkedin} loading="lazy" width="23" alt="LinkedIn" />
             </a>
             <a href={socialLinks.github} target="_blank" rel="noreferrer" className="social-icon w-inline-block">
-              <img src={socialIcons.github} loading="lazy" width="23" alt="GitHub" />
+              <img src={socialIcons.light.github} loading="lazy" width="23" alt="GitHub" />
             </a>
             <a href={socialLinks.instagram} target="_blank" rel="noreferrer" className="social-icon w-inline-block">
-              <img src={socialIcons.instagram} loading="lazy" width="20" alt="Instagram" />
+              <img src={socialIcons.light.instagram} loading="lazy" width="20" alt="Instagram" />
             </a>
           </div>
           <div className="social-wrapper">
             <a href={socialLinks.email} target="_blank" rel="noreferrer" className="social-icon w-inline-block">
-              <img src={socialIcons.email} loading="lazy" width="22" alt="Email" />
+              <img src={socialIcons.light.email} loading="lazy" width="22" alt="Email" />
             </a>
           </div>
         </div>

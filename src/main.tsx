@@ -4,6 +4,7 @@ import App from './App'
 import './styles/webflow.css'
 import './styles/site.css'
 import './styles/about.css'
+import './styles/modern.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

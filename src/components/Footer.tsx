@@ -39,7 +39,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="margin-30px">
-            <SocialIcons className="social-wrapper center" music />
+            <SocialIcons className="social-wrapper center" music variant="dark" />
           </div>
           <div className="margin-30px">
             <div className="copyright-flex">

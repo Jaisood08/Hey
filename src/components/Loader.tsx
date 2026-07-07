@@ -10,5 +10,10 @@ export default function Loader() {
   }, [])
 
   if (hidden) return null
-  return <div id="Jload" />
+  return (
+    <div id="Jload">
+      <div className="loader-ring"></div>
+      <div className="loader-name">Jay Sood</div>
+    </div>
+  )
 }

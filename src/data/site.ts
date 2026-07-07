@@ -10,15 +10,26 @@ export const socialLinks = {
   soundcloud: 'https://soundcloud.com/jai-sood-375791820',
 }
 
+// light icons sit on dark hero/nav surfaces, dark icons on the paper footer
 export const socialIcons = {
-  linkedin: 'https://cdn-icons-png.flaticon.com/512/1409/1409945.png',
-  github: 'https://cdn-icons-png.flaticon.com/512/270/270798.png',
-  instagram: 'https://cdn-icons-png.flaticon.com/512/2111/2111463.png',
-  email: 'https://cdn-icons-png.flaticon.com/512/2965/2965306.png',
-  youtube:
-    'https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Youtube_colored_svg-128.png',
-  beatstars: 'https://www.beatstars.com/assets/img/bs-logos/bs-logo-red.svg',
-  soundcloud: 'https://cdn-icons-png.flaticon.com/512/145/145809.png',
+  light: {
+    linkedin: `${BASE}icons/linkedin-light.svg`,
+    github: `${BASE}icons/github-light.svg`,
+    instagram: `${BASE}icons/instagram-light.svg`,
+    email: `${BASE}icons/email-light.svg`,
+    youtube: `${BASE}icons/youtube-light.svg`,
+    beatstars: `${BASE}icons/music-light.svg`,
+    soundcloud: `${BASE}icons/soundcloud-light.svg`,
+  },
+  dark: {
+    linkedin: `${BASE}icons/linkedin-dark.svg`,
+    github: `${BASE}icons/github-dark.svg`,
+    instagram: `${BASE}icons/instagram-dark.svg`,
+    email: `${BASE}icons/email-dark.svg`,
+    youtube: `${BASE}icons/youtube-dark.svg`,
+    beatstars: `${BASE}icons/music-dark.svg`,
+    soundcloud: `${BASE}icons/soundcloud-dark.svg`,
+  },
 }
 
 export type ProjectCategory = 'photography' | 'logo' | 'graphics' | 'ads'
