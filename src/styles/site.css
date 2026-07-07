@@ -1,0 +1,359 @@
+/* ==========================================================================
+   Custom styles carried over from the original index.html / About.html /
+   Projects.html inline <style> blocks, plus React replacements for the
+   Webflow slider / menu interactions.
+   ========================================================================== */
+
+/* ----- Loading screen (Load.js + #Jload) ----- */
+#Jload {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  background: #000000 url('../assets/loader.gif') no-repeat center center;
+  background-size: 220px;
+}
+
+/* ----- Home hero (from index.html) ----- */
+.jayim {
+  display: block;
+  width: 60%;
+  max-width: 500px;
+  align-self: flex-start;
+  margin-top: 3.2%;
+  height: 60%;
+  flex: 1;
+  margin-right: 20px;
+}
+
+.CardR {
+  flex: 1;
+  min-width: 0;
+  max-width: 50%;
+  margin-left: 30px;
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+.jaytext h1 {
+  font-size: 90%;
+  font-weight: normal;
+}
+
+.stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.stats-row .stat {
+  flex: 1 1 33%;
+  min-width: 90px;
+}
+
+.stats-row .stat p {
+  font-size: medium;
+}
+
+@media (max-width: 480px) {
+  .stats-row .stat p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .jayim {
+    display: none;
+  }
+  .jrule {
+    height: 44px;
+    width: 44px;
+    right: 44px;
+  }
+  .slider-arrow.right.jrule {
+    right: 0;
+  }
+  .CardR {
+    flex: 1;
+    max-width: 100%;
+    margin-top: 0;
+    margin-left: 0px;
+    font-size: 18px;
+  }
+
+  .slider-tracker {
+    width: 60px;
+  }
+  .slider-mask {
+    margin-left: 60px;
+  }
+  .tracker-item {
+    width: 60px;
+    font-size: 12px;
+  }
+}
+
+/* typewriter cursor (injected by the original script) */
+.txt-rotate > .wrap {
+  border-right: 0.08em solid #666;
+}
+
+/* ----- Slider: React fade implementation of the Webflow slider ----- */
+
+/* Use dynamic viewport height so the hero (and the arrows anchored to its
+   bottom) always fit the visible screen, including mobile URL bars. */
+.hero {
+  height: 100vh;
+  height: 100dvh;
+}
+
+/* If slide content is taller than the screen (short windows, phones),
+   scroll it inside the slide instead of clipping it. */
+.slide {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.slide .project-content {
+  height: auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 110px 20px 90px;
+  overflow-x: hidden;
+}
+
+.slide .project-content .project-title {
+  width: 100%;
+  min-width: 0;
+}
+
+.slider {
+  position: relative;
+}
+
+.slider-mask {
+  position: relative;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 450ms ease, visibility 450ms ease;
+  pointer-events: none;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* entrance animation for headings/buttons inside the active slide */
+.slide .slide-in {
+  opacity: 0;
+  transform: translate3d(0, 50px, 0);
+}
+
+.slide.active .slide-in {
+  animation: slideContentIn 600ms ease forwards;
+}
+
+@keyframes slideContentIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slider-arrow {
+  position: absolute;
+  z-index: 30;
+  cursor: pointer;
+}
+
+.tracker-item {
+  cursor: pointer;
+}
+
+/* ----- Hamburger + full-screen menu (Webflow interaction replacement) ----- */
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 32px;
+}
+
+.hamburger-icon span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+  border-radius: 2px;
+  transition: transform 300ms ease, opacity 300ms ease;
+}
+
+.hamburger.is-open .hamburger-icon span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.is-open .hamburger-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.is-open .hamburger-icon span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.menu-wrapper.is-open {
+  display: block;
+}
+
+.menu-wrapper .menu-content {
+  margin-top: 40px;
+  width: 0%;
+  overflow: hidden;
+  transition: width 500ms ease;
+}
+
+.menu-wrapper.is-open .menu-content {
+  width: 100%;
+}
+
+.menu-wrapper .menu-inside-wrapper {
+  transform: translate3d(-100px, 0, 0);
+  opacity: 0;
+  transition: transform 500ms ease 200ms, opacity 500ms ease 200ms;
+}
+
+.menu-wrapper.is-open .menu-inside-wrapper {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+.menu-wrapper .copyright-flex {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* line-overlay hover effect on nav links (Webflow hover interaction) */
+.navigation-link .line-overlay {
+  width: 0%;
+  transition: width 400ms ease;
+}
+
+.navigation-link:hover .line-overlay {
+  width: 100%;
+}
+
+/* ----- About page hero ----- */
+.jaytry {
+  max-height: 700px;
+  width: auto;
+  height: auto;
+}
+
+/* ----- Projects page cards (from Projects.html) ----- */
+.JAYCARD {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  background-image: linear-gradient(to top, #96fbc4 0%);
+}
+
+.JAYCARD .card {
+  background: #fff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.5);
+  max-width: 950px;
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+  border-radius: 25px;
+  position: relative;
+}
+
+.JAYCARD .card h2 {
+  margin: 0;
+  padding: 0 1rem;
+}
+
+.JAYCARD .card .title {
+  padding: 1rem;
+  text-align: right;
+  color: green;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.JAYCARD .card .desc {
+  padding: 0.5rem 1rem;
+  font-size: 12px;
+}
+
+.JAYCARD .card .actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.JAYCARD .card svg {
+  margin: 0 auto;
+}
+
+.JAYCARD .card-text {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.JAYCARD .title-total {
+  padding: 2.5em 1.5em 1.5em 1.5em;
+}
+
+.JAYCARD .portada {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.JAYCARD a {
+  border: none;
+  background: none;
+  font-size: 34px;
+  color: #14141a;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.JAYCARD a:hover {
+  color: #6f7272;
+  transform: rotate(4deg);
+}
+
+@media (max-width: 700px) {
+  .JAYCARD .card-text {
+    grid-template-columns: 1fr;
+  }
+  .JAYCARD .portada {
+    border-radius: 20px 20px 0 0;
+    min-height: 180px;
+  }
+}
