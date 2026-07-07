@@ -119,8 +119,23 @@
   height: auto;
   min-height: 100vh;
   min-height: 100dvh;
-  padding: 110px 20px 90px;
+  padding: 90px 20px 70px;
   overflow-x: hidden;
+}
+
+/* tighten the intro card on shorter screens so slide 1 fits without scrolling */
+@media (max-height: 900px) {
+  .CardR {
+    margin-top: 0;
+    font-size: 17px;
+  }
+  .jayim {
+    margin-top: 0;
+    align-self: center;
+  }
+  .jayim img {
+    max-height: calc(100dvh - 220px);
+  }
 }
 
 .slide .project-content .project-title {
