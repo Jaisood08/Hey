@@ -82,7 +82,7 @@ export const projects: Project[] = [
     id: 'nlp',
     title: 'NLP Tweet Analysis',
     description:
-      'This project was made to focus on topic - "Kumbh Mela" I have taken some positive and negative articles on topic and created a dateset of them. Then i have trained a model on this data. Finally i am fetching tweets on this topic and analyzing them as positive or negative tweets.',
+      'This project was made to focus on topic - "Kumbh Mela". I have taken some positive and negative articles on topic and created a dataset of them. Then I have trained a model on this data. Finally I am fetching tweets on this topic and analyzing them as positive or negative tweets.',
     image: `${BASE}img/NLP.png`,
     categories: ['photography', 'graphics'],
     github: 'https://github.com/Jaisood08/NLP-Tweet-analysis',
@@ -91,7 +91,7 @@ export const projects: Project[] = [
     id: 'surveillance',
     title: 'Video-Surveillance-System',
     description:
-      'This is a Opencv project with deep learning .In deep learning for face recognition i have used deep metric learning where instead of trying to output a single label (or even the coordinates/bounding box of objects in an image), i am instead outputting a real-valued feature vector that is used to quantify the face.',
+      'This is an OpenCV project with deep learning. In deep learning for face recognition I have used deep metric learning where instead of trying to output a single label, I am instead outputting a real-valued feature vector that is used to quantify the face.',
     image: `${BASE}img/Video.png`,
     categories: ['photography'],
     github: 'https://github.com/Jaisood08/Video-Surveillance-System',
@@ -101,7 +101,7 @@ export const projects: Project[] = [
     id: 'topsis',
     title: 'TOPSIS',
     description:
-      'Simple Python module for Multiple Criteria Decision Making System using TOPSIS.can be used to compare many machine learning algorithms on multiple decision parameters provided as input.',
+      'Simple Python module for Multiple Criteria Decision Making System using TOPSIS. Can be used to compare many machine learning algorithms on multiple decision parameters provided as input.',
     image: `${BASE}img/Topsis.png`,
     categories: ['photography'],
     github: 'https://github.com/Jaisood08/TOPSIS-JAY-101803206',
@@ -111,7 +111,7 @@ export const projects: Project[] = [
     id: 'videoapp',
     title: 'Video App',
     description:
-      'A web app to covert video black and white and reduce frame size off video.used flask and python in backend and deployed on heroku.',
+      'A web app to convert video to black and white and reduce frame size of video. Used Flask and Python in backend and deployed on Heroku.',
     image: `${BASE}img/Videoapp.png`,
     categories: ['graphics'],
     github: 'https://github.com/Jaisood08/Video-app-mini-project',
@@ -119,9 +119,9 @@ export const projects: Project[] = [
   },
   {
     id: 'flappy',
-    title: 'Flappy Bird Game in OpenGl',
+    title: 'Flappy Bird Game in OpenGL',
     description:
-      'Game with speed controls and night mode.The project is based upon GLUT i.e. the OpenGL Utility Toolkit, a window system independent toolkit for writing OpenGL programs. OpenGL is a cross-language, cross- platform application programming interface for rendering 2D and 3D vector graphics.',
+      'Game with speed controls and night mode. The project is based upon GLUT i.e. the OpenGL Utility Toolkit, a window system independent toolkit for writing OpenGL programs.',
     image: `${BASE}img/flappy.png`,
     categories: ['ads'],
     github: 'https://github.com/Jaisood08/Flappy_Bird-OPENGL',

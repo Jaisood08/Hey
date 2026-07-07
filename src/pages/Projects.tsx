@@ -36,17 +36,19 @@ export default function Projects() {
           style={{
             maxHeight: '40%',
             marginBottom: 20,
-            backgroundImage: `url("${BASE}img/hero-silk.jpg")`,
+            backgroundImage: `url("${BASE}img/bg-silk-navy.jpg")`,
           }}
           className="hero sub _5 b"
         >
           <Navigation tagline="My Projects" />
           <div className="container">
             <div className="sub-flex blog-page">
-              <div className="sub-text" style={{ textAlign: 'left', color: 'black' }}>
+              <div className="sub-text" style={{ textAlign: 'left', color: '#E9EEF6' }}>
                 My Projects
               </div>
-              <h1 className="title-3 black">Things I have Done.</h1>
+              <h1 className="title-3" style={{ color: '#C9D6EA' }}>
+                Things I have Done.
+              </h1>
             </div>
           </div>
         </div>
