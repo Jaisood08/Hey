@@ -272,6 +272,7 @@ h1, h2, h3, h4, h5, .sub-text, .title-3, .project-heading, .timeline-event-copy 
 /* ----- Projects page cards ----- */
 .JAYCARD {
   background-color: var(--paper);
+  background-image: none;
   font-family: 'Manrope', sans-serif;
 }
 
